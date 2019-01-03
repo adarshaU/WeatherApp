@@ -19,8 +19,6 @@ final class Webservice{
     func load<T>(resources:Resource<T>,completion:@escaping (T?)->()){
         
         URLSession.shared.dataTask(with: resources.url) { (data, response, error) in
-            print(data)
-            
             if let data = data{
                 DispatchQueue.main.async {
                     completion(resources.parse(data))

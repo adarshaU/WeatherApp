@@ -13,15 +13,9 @@ class WeatherTableViewCell: UITableViewCell {
     @IBOutlet weak var cityLabel: UILabel!
     
     @IBOutlet weak var tempratureLabel: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configure(_ vm:WeatherViewModel){
+        self.cityLabel.text = vm.name
+        self.tempratureLabel.text = "\(vm.main.temperature.formatAsDegree)"
     }
 
 }

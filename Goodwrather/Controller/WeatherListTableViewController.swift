@@ -51,9 +51,10 @@ class WeatherListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherTableViewCell", for: indexPath) as! WeatherTableViewCell
+        
         let weatherModel = self.weatherListViewModel.modelAt(index: indexPath.row)
-        cell.cityLabel.text = weatherModel.name
-        cell.tempratureLabel.text = "\(weatherModel.main.temperature)"
+        cell.configure(weatherModel)
+        
         return cell
     }
     
