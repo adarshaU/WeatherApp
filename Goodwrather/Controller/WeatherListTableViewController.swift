@@ -8,7 +8,9 @@
 
 import UIKit
 
-class WeatherListTableViewController: UITableViewController {
+class WeatherListTableViewController: UITableViewController,SettingsDelegate {
+    
+    
 
     
     private var weatherListViewModel = WeatherListViewModel(){
@@ -45,7 +47,17 @@ class WeatherListTableViewController: UITableViewController {
     
     func prepareSegueForSettings(segue: UIStoryboardSegue){
         
-        
+        guard let nav = segue.destination as? UINavigationController else {
+            fatalError("gone case")
+        }
+        guard let addWeatherNavVc = nav.viewControllers.first as? SettingsTableViewController else{
+            fatalError("gone case")
+        }
+        addWeatherNavVc.delegate = self
+    }
+    
+    func settingsDone(vm: SettingsViewModel) {
+       print(vm.selectedUnit)
     }
     
     
