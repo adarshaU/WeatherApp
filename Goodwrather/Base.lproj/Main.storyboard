@@ -69,7 +69,8 @@
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="4dd-Li-YNN"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="LDN-67-p6R">
                             <connections>
-                                <segue destination="et0-Eq-joz" kind="presentation" id="S8v-eB-IRc"/>
+                                <action selector="addWeatherAction:" destination="Mda-9V-ueC" id="ELm-NZ-9gD"/>
+                                <segue destination="et0-Eq-joz" kind="presentation" identifier="ToAddWeather" id="S8v-eB-IRc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
