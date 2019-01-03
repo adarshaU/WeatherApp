@@ -57,9 +57,9 @@ class WeatherListTableViewController: UITableViewController,SettingsDelegate {
     }
     
     func settingsDone(vm: SettingsViewModel) {
-       print(vm.selectedUnit)
+       weatherListViewModel.updateUnit(to: vm.selectedUnit)
+        tableView.reloadData()
     }
-    
     
     func prepareSegueForAddCityWeather(segue: UIStoryboardSegue){
         guard let nav = segue.destination as? UINavigationController else {

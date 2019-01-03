@@ -24,16 +24,45 @@ struct WeatherListViewModel{
     func modelAt(index:Int)->WeatherViewModel{
         return self.weatherViewModels[index]
     }
+    
+    mutating func updateUnit(to:Unit){
+        switch to {
+        case .celsius:
+            self.toCelsius()
+        case .fahrenheit:
+            self.tofahrenheit()
+        }
+    }
+    
+    mutating private func toCelsius(){
+        
+      weatherViewModels =  weatherViewModels.map{ vm in
+            var model = vm
+            model.main.temperature =  (model.main.temperature - 32) * 5/9
+            return model
+        }
+        
+    }
+    mutating private func tofahrenheit(){
+        
+        weatherViewModels =  weatherViewModels.map{ vm in
+            var model = vm
+            model.main.temperature =  (model.main.temperature * 9/5) + 32
+            return model
+        }
+        
+    }
+    
 }
 
 struct WeatherViewModel:Codable{
     let name:String
-    let main:TemperatureViewModel
+    var main:TemperatureViewModel
 }
 
 struct TemperatureViewModel:Codable {
     
-    let temperature:Double
+    var temperature:Double
     let temperatureMin:Double
     let temperatureMax:Double
     
