@@ -25,6 +25,7 @@ struct WeatherListViewModel{
         return self.weatherViewModels[index]
     }
 }
+
 struct WeatherViewModel:Codable{
     let name:String
     let main:TemperatureViewModel
