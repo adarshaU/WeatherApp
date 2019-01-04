@@ -17,18 +17,21 @@ class WeatherDetailsViewController: UIViewController {
     
     var weatherViewModel:WeatherViewModel?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let weatherVM = weatherViewModel{
-            cityLabel.text = weatherVM.name
-            currentTempLabel.text = weatherVM.main.temperature.formatAsDegree
-            maxTemperatureLabel.text = weatherVM.main.temperatureMax.formatAsDegree
-            minTemperatureLabel.text = weatherVM.main.temperatureMin.formatAsDegree
-        }
-        
+        self.setupBinings()
     }
     
-
+    private func setupBinings(){
+        if let weatherVM = weatherViewModel{
+            weatherVM.name.bind {self.cityLabel.text = $0}
+            weatherVM.main.temperature.bind{self.currentTempLabel.text = $0.formatAsDegree}
+            weatherVM.main.temperatureMin.bind{self.minTemperatureLabel.text = $0.formatAsDegree}
+            weatherVM.main.temperatureMax.bind{self.maxTemperatureLabel.text = $0.formatAsDegree}
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+            self.weatherViewModel?.name.value = "Anekal"
+        }
+    }
 }
