@@ -126,7 +126,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hBn-xw-vli">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hBn-xw-vli" customClass="BindingUITextField" customModule="Goodwrather" customModuleProvider="target">
                                 <rect key="frame" x="16" y="81" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="I1O-aj-IAq"/>
@@ -146,7 +146,7 @@
                                     <action selector="saveAction:" destination="4Ka-pA-p14" eventType="touchUpInside" id="O0W-a8-5Po"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XQc-2g-yFI">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XQc-2g-yFI" customClass="BindingUITextField" customModule="Goodwrather" customModuleProvider="target">
                                 <rect key="frame" x="16" y="119" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="uPI-tU-Oq7"/>
@@ -155,7 +155,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter ZipCode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ID-Nv-Tql">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter ZipCode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ID-Nv-Tql" customClass="BindingUITextField" customModule="Goodwrather" customModuleProvider="target">
                                 <rect key="frame" x="16" y="166" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="5sw-w7-LRb"/>

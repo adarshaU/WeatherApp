@@ -16,9 +16,27 @@ protocol AddWeathreDelegateProtocol {
 
 class AddCityWeatherViewController: UIViewController {
 
-    @IBOutlet weak var cityNameTextField: UITextField!
-    @IBOutlet weak var stateTextField: UITextField!
-    @IBOutlet weak var zipCodeTextField: UITextField!
+    private var addCityViewModel = AddCityViewModel()
+    
+    @IBOutlet weak var cityNameTextField: BindingUITextField!{
+        didSet{
+            cityNameTextField.bind { (valueRecived) in
+                self.addCityViewModel.city = valueRecived
+            }
+        }
+    }
+    
+    @IBOutlet weak var stateTextField: BindingUITextField!{
+        didSet{
+            stateTextField.bind {self.addCityViewModel.state = $0}
+        }
+    }
+    
+    @IBOutlet weak var zipCodeTextField: BindingUITextField!{
+        didSet{
+            zipCodeTextField.bind{self.addCityViewModel.zipcode = $0}
+        }
+    }
     
     
     var delegate:AddWeathreDelegateProtocol?
@@ -27,11 +45,15 @@ class AddCityWeatherViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    
     @IBAction func close(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    
     @IBAction func saveAction(_ sender: UIButton) {
+        
+        print(self.addCityViewModel)
         
         if let city = cityNameTextField.text, let formattedCity = city.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed){
             

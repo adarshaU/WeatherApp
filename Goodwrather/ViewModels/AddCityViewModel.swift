@@ -10,7 +10,7 @@ import Foundation
 
 
 struct AddCityViewModel {
-    var city:String
-    var state:String
-    var zipcode:String
+    var city:String = ""
+    var state:String = ""
+    var zipcode:String = ""
 }
