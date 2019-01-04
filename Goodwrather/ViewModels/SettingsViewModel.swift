@@ -25,7 +25,7 @@ struct SettingsViewModel {
             }
             return _selectedUnit
         }set (newValue){
-        let userDefaults = UserDefaults.standard
+            let userDefaults = UserDefaults.standard
             userDefaults.set(newValue.rawValue, forKey: "unit")
         }
     }

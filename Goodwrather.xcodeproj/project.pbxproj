@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C71428D621DF322800B388E7 /* AddCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71428D521DF322800B388E7 /* AddCityViewModel.swift */; };
+		C71428D921DF32B000B388E7 /* BindingUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71428D821DF32B000B388E7 /* BindingUITextField.swift */; };
 		C71EB98E21DDE1EA0015D14F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71EB98D21DDE1EA0015D14F /* AppDelegate.swift */; };
 		C71EB99321DDE1EA0015D14F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C71EB99121DDE1EA0015D14F /* Main.storyboard */; };
 		C71EB99521DDE1EC0015D14F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C71EB99421DDE1EC0015D14F /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C71428D521DF322800B388E7 /* AddCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewModel.swift; sourceTree = "<group>"; };
+		C71428D821DF32B000B388E7 /* BindingUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingUITextField.swift; sourceTree = "<group>"; };
 		C71EB98A21DDE1EA0015D14F /* Goodwrather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goodwrather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C71EB98D21DDE1EA0015D14F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C71EB99221DDE1EA0015D14F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C71428D721DF328500B388E7 /* Custom Controls */ = {
+			isa = PBXGroup;
+			children = (
+				C71428D821DF32B000B388E7 /* BindingUITextField.swift */,
+			);
+			path = "Custom Controls";
+			sourceTree = "<group>";
+		};
 		C71EB98121DDE1EA0015D14F = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +80,7 @@
 		C71EB98C21DDE1EA0015D14F /* Goodwrather */ = {
 			isa = PBXGroup;
 			children = (
+				C71428D721DF328500B388E7 /* Custom Controls */,
 				C71EB9AD21DE12430015D14F /* Extensions */,
 				C71EB9AA21DE05250015D14F /* ViewModels */,
 				C71EB9A721DDEF3F0015D14F /* Sevices */,
@@ -113,6 +126,7 @@
 			children = (
 				C71EB9AB21DE05390015D14F /* WeatherListViewModel.swift */,
 				C756058A21DE1D1200C936C0 /* SettingsViewModel.swift */,
+				C71428D521DF322800B388E7 /* AddCityViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -197,10 +211,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C71EB9A621DDE86B0015D14F /* WeatherTableViewCell.swift in Sources */,
+				C71428D921DF32B000B388E7 /* BindingUITextField.swift in Sources */,
 				C71EB9A121DDE3AD0015D14F /* WeatherListTableViewController.swift in Sources */,
 				C71EB9AF21DE12590015D14F /* Double+Extensions.swift in Sources */,
 				C71EB98E21DDE1EA0015D14F /* AppDelegate.swift in Sources */,
 				C71EB9B121DE1A240015D14F /* SettingsTableViewController.swift in Sources */,
+				C71428D621DF322800B388E7 /* AddCityViewModel.swift in Sources */,
 				C71EB9AC21DE05390015D14F /* WeatherListViewModel.swift in Sources */,
 				C71EB9A921DDEF520015D14F /* Webservice.swift in Sources */,
 				C71EB9A321DDE3D60015D14F /* AddCityWeatherViewController.swift in Sources */,

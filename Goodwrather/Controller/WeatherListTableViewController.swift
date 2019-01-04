@@ -10,9 +10,6 @@ import UIKit
 
 class WeatherListTableViewController: UITableViewController,SettingsDelegate {
     
-    
-
-    
     private var weatherListViewModel = WeatherListViewModel(){
         didSet{
             self.tableView.reloadData()
@@ -85,11 +82,7 @@ class WeatherListTableViewController: UITableViewController,SettingsDelegate {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-
-   
-
 }
-
 
 extension WeatherListTableViewController:AddWeathreDelegateProtocol{
     func addWeatherDidSave(vm: WeatherViewModel) {

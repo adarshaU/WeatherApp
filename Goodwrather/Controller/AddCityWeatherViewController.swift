@@ -17,6 +17,10 @@ protocol AddWeathreDelegateProtocol {
 class AddCityWeatherViewController: UIViewController {
 
     @IBOutlet weak var cityNameTextField: UITextField!
+    @IBOutlet weak var stateTextField: UITextField!
+    @IBOutlet weak var zipCodeTextField: UITextField!
+    
+    
     var delegate:AddWeathreDelegateProtocol?
     
     override func viewDidLoad() {

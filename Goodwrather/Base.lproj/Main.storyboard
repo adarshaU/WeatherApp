@@ -126,7 +126,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hBn-xw-vli">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hBn-xw-vli">
                                 <rect key="frame" x="16" y="81" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="I1O-aj-IAq"/>
@@ -136,7 +136,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoA-uk-JYG">
-                                <rect key="frame" x="170.5" y="137" width="34" height="30"/>
+                                <rect key="frame" x="170.5" y="240" width="34" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="34" id="eUM-Ry-2VO"/>
                                     <constraint firstAttribute="height" constant="30" id="iSp-ch-YFT"/>
@@ -146,12 +146,36 @@
                                     <action selector="saveAction:" destination="4Ka-pA-p14" eventType="touchUpInside" id="O0W-a8-5Po"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XQc-2g-yFI">
+                                <rect key="frame" x="16" y="119" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uPI-tU-Oq7"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter ZipCode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ID-Nv-Tql">
+                                <rect key="frame" x="16" y="166" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5sw-w7-LRb"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="XQc-2g-yFI" firstAttribute="trailing" secondItem="hBn-xw-vli" secondAttribute="trailing" id="11O-tr-j7t"/>
+                            <constraint firstItem="2ID-Nv-Tql" firstAttribute="trailing" secondItem="XQc-2g-yFI" secondAttribute="trailing" id="HEi-tm-apq"/>
+                            <constraint firstItem="XQc-2g-yFI" firstAttribute="leading" secondItem="hBn-xw-vli" secondAttribute="leading" id="Kzm-VH-pH9"/>
+                            <constraint firstItem="KoA-uk-JYG" firstAttribute="top" secondItem="2ID-Nv-Tql" secondAttribute="bottom" constant="44" id="QsV-Wq-uy0"/>
                             <constraint firstItem="IGa-mQ-e54" firstAttribute="trailing" secondItem="hBn-xw-vli" secondAttribute="trailing" constant="16" id="V1w-HY-9tp"/>
-                            <constraint firstItem="KoA-uk-JYG" firstAttribute="top" secondItem="hBn-xw-vli" secondAttribute="bottom" constant="26" id="V7b-Sx-hJl"/>
+                            <constraint firstItem="2ID-Nv-Tql" firstAttribute="leading" secondItem="XQc-2g-yFI" secondAttribute="leading" id="cIl-gZ-NKu"/>
                             <constraint firstItem="KoA-uk-JYG" firstAttribute="centerX" secondItem="8my-Ot-YuE" secondAttribute="centerX" id="h15-38-yl4"/>
+                            <constraint firstItem="XQc-2g-yFI" firstAttribute="top" secondItem="hBn-xw-vli" secondAttribute="bottom" constant="8" id="knf-SQ-m4z"/>
+                            <constraint firstItem="2ID-Nv-Tql" firstAttribute="top" secondItem="XQc-2g-yFI" secondAttribute="bottom" constant="17" id="p34-2X-50j"/>
                             <constraint firstItem="hBn-xw-vli" firstAttribute="leading" secondItem="IGa-mQ-e54" secondAttribute="leading" constant="16" id="qZP-0O-EmJ"/>
                             <constraint firstItem="hBn-xw-vli" firstAttribute="top" secondItem="IGa-mQ-e54" secondAttribute="top" constant="17" id="tkM-Cl-3qk"/>
                         </constraints>
@@ -166,6 +190,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cityNameTextField" destination="hBn-xw-vli" id="Wq0-79-Ki5"/>
+                        <outlet property="stateTextField" destination="XQc-2g-yFI" id="uy8-Lf-KTW"/>
+                        <outlet property="zipCodeTextField" destination="2ID-Nv-Tql" id="mCI-qO-L1g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYn-GH-nvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
