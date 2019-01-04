@@ -92,6 +92,7 @@
                                 <connections>
                                     <outlet property="cityLabel" destination="eya-gu-r6Z" id="stX-Ou-AKD"/>
                                     <outlet property="tempratureLabel" destination="XhG-k3-KG3" id="BUb-Ep-vFM"/>
+                                    <segue destination="vau-wB-71d" kind="show" identifier="ToWeatherDetailsViewController" id="N7h-uY-Zsh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -233,6 +234,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HyY-rv-5Tl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1887.2" y="188.45577211394306"/>
+        </scene>
+        <!--Weather Details View Controller-->
+        <scene sceneID="nUf-k9-C5a">
+            <objects>
+                <viewController storyboardIdentifier="WeatherDetailsViewController" id="vau-wB-71d" customClass="WeatherDetailsViewController" customModule="Goodwrather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4LR-L0-5Vb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUc-6l-qhc">
+                                <rect key="frame" x="16" y="91" width="343" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="sWm-Ri-HdH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guH-JC-beJ">
+                                <rect key="frame" x="16" y="161" width="343" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="YLP-kD-CF8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XlV-fC-a1P">
+                                <rect key="frame" x="16" y="235" width="343" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="0Pq-ia-6H9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qf-Ux-Bbe">
+                                <rect key="frame" x="16" y="309" width="343" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="Db9-vE-una"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9qf-Ux-Bbe" firstAttribute="leading" secondItem="bQE-sJ-e4L" secondAttribute="leading" constant="16" id="BqY-IG-Tbs"/>
+                            <constraint firstItem="guH-JC-beJ" firstAttribute="top" secondItem="SUc-6l-qhc" secondAttribute="bottom" constant="21" id="GwN-ik-Me4"/>
+                            <constraint firstItem="XlV-fC-a1P" firstAttribute="leading" secondItem="bQE-sJ-e4L" secondAttribute="leading" constant="16" id="OSv-RX-HA3"/>
+                            <constraint firstItem="bQE-sJ-e4L" firstAttribute="trailing" secondItem="SUc-6l-qhc" secondAttribute="trailing" constant="16" id="OUH-K7-lJz"/>
+                            <constraint firstItem="9qf-Ux-Bbe" firstAttribute="top" secondItem="XlV-fC-a1P" secondAttribute="bottom" constant="25" id="Q3D-yc-gF0"/>
+                            <constraint firstItem="SUc-6l-qhc" firstAttribute="top" secondItem="bQE-sJ-e4L" secondAttribute="top" constant="27" id="RaF-2p-uw4"/>
+                            <constraint firstItem="bQE-sJ-e4L" firstAttribute="trailing" secondItem="guH-JC-beJ" secondAttribute="trailing" constant="16" id="Rlc-VH-7Mh"/>
+                            <constraint firstItem="bQE-sJ-e4L" firstAttribute="bottom" secondItem="9qf-Ux-Bbe" secondAttribute="bottom" priority="250" constant="309" id="b8h-Bk-mll"/>
+                            <constraint firstItem="XlV-fC-a1P" firstAttribute="top" secondItem="guH-JC-beJ" secondAttribute="bottom" constant="25" id="bWh-4Q-Ssy"/>
+                            <constraint firstItem="bQE-sJ-e4L" firstAttribute="trailing" secondItem="9qf-Ux-Bbe" secondAttribute="trailing" constant="16" id="gGV-1A-q5o"/>
+                            <constraint firstItem="guH-JC-beJ" firstAttribute="leading" secondItem="bQE-sJ-e4L" secondAttribute="leading" constant="16" id="h2E-ap-Sz5"/>
+                            <constraint firstItem="SUc-6l-qhc" firstAttribute="leading" secondItem="bQE-sJ-e4L" secondAttribute="leading" constant="16" id="tQb-AW-UX7"/>
+                            <constraint firstItem="bQE-sJ-e4L" firstAttribute="trailing" secondItem="XlV-fC-a1P" secondAttribute="trailing" constant="16" id="uxS-CU-ln5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bQE-sJ-e4L"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="SUc-6l-qhc" id="0eS-dM-opW"/>
+                        <outlet property="currentTempLabel" destination="guH-JC-beJ" id="mSw-RD-EDu"/>
+                        <outlet property="maxTemperatureLabel" destination="XlV-fC-a1P" id="XpJ-Q4-zSL"/>
+                        <outlet property="minTemperatureLabel" destination="9qf-Ux-Bbe" id="824-35-wCp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cXx-ll-yuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912.8" y="906.29685157421295"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jSH-33-D7J">

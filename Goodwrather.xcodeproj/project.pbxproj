@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C71428D621DF322800B388E7 /* AddCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71428D521DF322800B388E7 /* AddCityViewModel.swift */; };
 		C71428D921DF32B000B388E7 /* BindingUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71428D821DF32B000B388E7 /* BindingUITextField.swift */; };
+		C71428DB21DF3D1500B388E7 /* WeatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71428DA21DF3D1500B388E7 /* WeatherDetailsViewController.swift */; };
 		C71EB98E21DDE1EA0015D14F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71EB98D21DDE1EA0015D14F /* AppDelegate.swift */; };
 		C71EB99321DDE1EA0015D14F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C71EB99121DDE1EA0015D14F /* Main.storyboard */; };
 		C71EB99521DDE1EC0015D14F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C71EB99421DDE1EC0015D14F /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		C71428D521DF322800B388E7 /* AddCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewModel.swift; sourceTree = "<group>"; };
 		C71428D821DF32B000B388E7 /* BindingUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingUITextField.swift; sourceTree = "<group>"; };
+		C71428DA21DF3D1500B388E7 /* WeatherDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewController.swift; sourceTree = "<group>"; };
 		C71EB98A21DDE1EA0015D14F /* Goodwrather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goodwrather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C71EB98D21DDE1EA0015D14F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C71EB99221DDE1EA0015D14F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				C71EB9B021DE1A240015D14F /* SettingsTableViewController.swift */,
 				C71EB9A021DDE3AD0015D14F /* WeatherListTableViewController.swift */,
 				C71EB9A221DDE3D60015D14F /* AddCityWeatherViewController.swift */,
+				C71428DA21DF3D1500B388E7 /* WeatherDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			files = (
 				C71EB9A621DDE86B0015D14F /* WeatherTableViewCell.swift in Sources */,
 				C71428D921DF32B000B388E7 /* BindingUITextField.swift in Sources */,
+				C71428DB21DF3D1500B388E7 /* WeatherDetailsViewController.swift in Sources */,
 				C71EB9A121DDE3AD0015D14F /* WeatherListTableViewController.swift in Sources */,
 				C71EB9AF21DE12590015D14F /* Double+Extensions.swift in Sources */,
 				C71EB98E21DDE1EA0015D14F /* AppDelegate.swift in Sources */,
