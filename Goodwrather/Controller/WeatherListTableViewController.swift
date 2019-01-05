@@ -12,12 +12,16 @@ class WeatherListTableViewController: UITableViewController,SettingsDelegate {
     
     private var weatherListViewModel = WeatherListViewModel()
     
-    var dataSorce:WeatherDataSource?
+    var dataSorce:TableViewDataSource<WeatherTableViewCell,WeatherViewModel>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.dataSorce = WeatherDataSource(weatherListViewModel: weatherListViewModel)
+        self.dataSorce = TableViewDataSource(cellIdentifier: "WeatherTableViewCell", viewModel: weatherListViewModel.weatherViewModels, configureCell: { (weatherCell, viewModel) in
+            weatherCell.cityLabel.text = viewModel.name.value
+            weatherCell.tempratureLabel.text = viewModel.main.temperature.value.formatAsDegree
+            
+        })
         self.tableView.dataSource = self.dataSorce
 
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -77,6 +81,7 @@ class WeatherListTableViewController: UITableViewController,SettingsDelegate {
 extension WeatherListTableViewController:AddWeathreDelegateProtocol{
     func addWeatherDidSave(vm: WeatherViewModel) {
         self.weatherListViewModel.addWeatherViewModel(vm: vm)
+        self.dataSorce?.update(items: self.weatherListViewModel.weatherViewModels)
         self.tableView.reloadData()
     }
 }

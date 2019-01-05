@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C709D92C21E0DEDD00D6E58D /* WeatherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C709D92B21E0DEDD00D6E58D /* WeatherDataSource.swift */; };
+		C709D92E21E0FC2500D6E58D /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C709D92D21E0FC2500D6E58D /* TableViewDataSource.swift */; };
 		C71428D621DF322800B388E7 /* AddCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71428D521DF322800B388E7 /* AddCityViewModel.swift */; };
 		C71428D921DF32B000B388E7 /* BindingUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71428D821DF32B000B388E7 /* BindingUITextField.swift */; };
 		C71428DB21DF3D1500B388E7 /* WeatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71428DA21DF3D1500B388E7 /* WeatherDetailsViewController.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		C709D92B21E0DEDD00D6E58D /* WeatherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataSource.swift; sourceTree = "<group>"; };
+		C709D92D21E0FC2500D6E58D /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		C71428D521DF322800B388E7 /* AddCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewModel.swift; sourceTree = "<group>"; };
 		C71428D821DF32B000B388E7 /* BindingUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingUITextField.swift; sourceTree = "<group>"; };
 		C71428DA21DF3D1500B388E7 /* WeatherDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				C709D92B21E0DEDD00D6E58D /* WeatherDataSource.swift */,
+				C709D92D21E0FC2500D6E58D /* TableViewDataSource.swift */,
 			);
 			path = Datasources;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				C71EB9AC21DE05390015D14F /* WeatherListViewModel.swift in Sources */,
 				C71EB9A921DDEF520015D14F /* Webservice.swift in Sources */,
 				C71EB9A321DDE3D60015D14F /* AddCityWeatherViewController.swift in Sources */,
+				C709D92E21E0FC2500D6E58D /* TableViewDataSource.swift in Sources */,
 				C756058B21DE1D1200C936C0 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

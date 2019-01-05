@@ -11,7 +11,7 @@ import Foundation
 
 class WeatherListViewModel{
     
-    private var weatherViewModels = [WeatherViewModel]()
+    private(set) var weatherViewModels = [WeatherViewModel]()
     
      func addWeatherViewModel(vm:WeatherViewModel){
         self.weatherViewModels.append(vm)
