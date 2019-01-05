@@ -24,7 +24,9 @@ class WeatherDetailsViewController: UIViewController {
     
     private func setupBinings(){
         if let weatherVM = weatherViewModel{
-            weatherVM.name.bind {self.cityLabel.text = $0}
+            weatherVM.name.bind {
+                self.cityLabel.text = $0
+            }
             weatherVM.main.temperature.bind{self.currentTempLabel.text = $0.formatAsDegree}
             weatherVM.main.temperatureMin.bind{self.minTemperatureLabel.text = $0.formatAsDegree}
             weatherVM.main.temperatureMax.bind{self.maxTemperatureLabel.text = $0.formatAsDegree}

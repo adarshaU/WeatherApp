@@ -9,11 +9,11 @@
 import Foundation
 
 
-struct WeatherListViewModel{
+class WeatherListViewModel{
     
     private var weatherViewModels = [WeatherViewModel]()
     
-    mutating func addWeatherViewModel(vm:WeatherViewModel){
+     func addWeatherViewModel(vm:WeatherViewModel){
         self.weatherViewModels.append(vm)
     }
     
@@ -25,7 +25,7 @@ struct WeatherListViewModel{
         return self.weatherViewModels[index]
     }
     
-    mutating func updateUnit(to:Unit){
+     func updateUnit(to:Unit){
         switch to {
         case .celsius:
             self.toCelsius()
@@ -34,7 +34,7 @@ struct WeatherListViewModel{
         }
     }
     
-    mutating private func toCelsius(){
+     private func toCelsius(){
         
       weatherViewModels =  weatherViewModels.map{ vm in
             let model = vm
@@ -43,7 +43,7 @@ struct WeatherListViewModel{
         }
         
     }
-    mutating private func tofahrenheit(){
+     private func tofahrenheit(){
         
         weatherViewModels =  weatherViewModels.map{ vm in
             let model = vm
@@ -52,7 +52,6 @@ struct WeatherListViewModel{
         }
     }
 }
-
 
 
 struct WeatherViewModel:Codable{
@@ -64,7 +63,6 @@ struct WeatherViewModel:Codable{
         name = Dynamic(try container.decode(String.self, forKey: .name))
         main = try container.decode(TemperatureViewModel.self, forKey: .main)
     }
-    
 }
 
 struct TemperatureViewModel:Codable {
@@ -75,6 +73,7 @@ struct TemperatureViewModel:Codable {
     
     init(from decoder:Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
+      //This line of code simply returns the value of key temperature  "container.decode(Double.self, forKey: .temperature)"
         temperature = Dynamic(try container.decode(Double.self, forKey: .temperature))
         temperatureMin = Dynamic(try container.decode(Double.self, forKey: .temperatureMin))
         temperatureMax = Dynamic(try container.decode(Double.self, forKey: .temperatureMax))
@@ -85,7 +84,6 @@ struct TemperatureViewModel:Codable {
         case temperatureMin = "temp_min"
         case temperatureMax = "temp_max"
     }
-    
 }
 
 class Dynamic<T>:Codable where T:Codable{

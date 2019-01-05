@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C709D92C21E0DEDD00D6E58D /* WeatherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C709D92B21E0DEDD00D6E58D /* WeatherDataSource.swift */; };
 		C71428D621DF322800B388E7 /* AddCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71428D521DF322800B388E7 /* AddCityViewModel.swift */; };
 		C71428D921DF32B000B388E7 /* BindingUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71428D821DF32B000B388E7 /* BindingUITextField.swift */; };
 		C71428DB21DF3D1500B388E7 /* WeatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71428DA21DF3D1500B388E7 /* WeatherDetailsViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C709D92B21E0DEDD00D6E58D /* WeatherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataSource.swift; sourceTree = "<group>"; };
 		C71428D521DF322800B388E7 /* AddCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewModel.swift; sourceTree = "<group>"; };
 		C71428D821DF32B000B388E7 /* BindingUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingUITextField.swift; sourceTree = "<group>"; };
 		C71428DA21DF3D1500B388E7 /* WeatherDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C709D92A21E0DEC100D6E58D /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				C709D92B21E0DEDD00D6E58D /* WeatherDataSource.swift */,
+			);
+			path = Datasources;
+			sourceTree = "<group>";
+		};
 		C71428D721DF328500B388E7 /* Custom Controls */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 		C71EB98C21DDE1EA0015D14F /* Goodwrather */ = {
 			isa = PBXGroup;
 			children = (
+				C709D92A21E0DEC100D6E58D /* Datasources */,
 				C71428D721DF328500B388E7 /* Custom Controls */,
 				C71EB9AD21DE12430015D14F /* Extensions */,
 				C71EB9AA21DE05250015D14F /* ViewModels */,
@@ -219,6 +230,7 @@
 				C71EB9A121DDE3AD0015D14F /* WeatherListTableViewController.swift in Sources */,
 				C71EB9AF21DE12590015D14F /* Double+Extensions.swift in Sources */,
 				C71EB98E21DDE1EA0015D14F /* AppDelegate.swift in Sources */,
+				C709D92C21E0DEDD00D6E58D /* WeatherDataSource.swift in Sources */,
 				C71EB9B121DE1A240015D14F /* SettingsTableViewController.swift in Sources */,
 				C71428D621DF322800B388E7 /* AddCityViewModel.swift in Sources */,
 				C71EB9AC21DE05390015D14F /* WeatherListViewModel.swift in Sources */,

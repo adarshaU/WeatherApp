@@ -10,28 +10,17 @@ import UIKit
 
 class WeatherListTableViewController: UITableViewController,SettingsDelegate {
     
-    private var weatherListViewModel = WeatherListViewModel(){
-        didSet{
-            self.tableView.reloadData()
-        }
-    }
+    private var weatherListViewModel = WeatherListViewModel()
+    
+    var dataSorce:WeatherDataSource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.dataSorce = WeatherDataSource(weatherListViewModel: weatherListViewModel)
+        self.tableView.dataSource = self.dataSorce
 
         self.navigationController?.navigationBar.prefersLargeTitles = true
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return weatherListViewModel.numberOfRows(section)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -65,8 +54,6 @@ class WeatherListTableViewController: UITableViewController,SettingsDelegate {
         
     }
     
-    
-    
     func settingsDone(vm: SettingsViewModel) {
        weatherListViewModel.updateUnit(to: vm.selectedUnit)
         tableView.reloadData()
@@ -82,17 +69,6 @@ class WeatherListTableViewController: UITableViewController,SettingsDelegate {
         addWeatherNavVc.delegate = self
     }
     
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherTableViewCell", for: indexPath) as! WeatherTableViewCell
-        
-        let weatherModel = self.weatherListViewModel.modelAt(index: indexPath.row)
-        cell.configure(weatherModel)
-        
-        return cell
-    }
-    
-    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
@@ -101,5 +77,6 @@ class WeatherListTableViewController: UITableViewController,SettingsDelegate {
 extension WeatherListTableViewController:AddWeathreDelegateProtocol{
     func addWeatherDidSave(vm: WeatherViewModel) {
         self.weatherListViewModel.addWeatherViewModel(vm: vm)
+        self.tableView.reloadData()
     }
 }
